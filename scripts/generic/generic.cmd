@@ -1,8 +1,11 @@
-﻿@echo off
 @echo off
-cls
 
+title Requesting administrator privileges...
+    IF "%PROCESSOR_ARCHITECTURE%" EQU "amd64" (
+>nul 2>&1 "%SYSTEMROOT%\SysWOW64\cacls.exe" "%SYSTEMROOT%\SysWOW64\config\system"
+) ELSE (
 >nul 2>&1 "%SYSTEMROOT%\system32\cacls.exe" "%SYSTEMROOT%\system32\config\system"
+)
 
 if '%errorlevel%' NEQ '0' (
     goto UACPrompt
@@ -10,8 +13,8 @@ if '%errorlevel%' NEQ '0' (
 
 :UACPrompt
     echo Set UAC = CreateObject^("Shell.Application"^) > "%temp%\getadmin.vbs"
-    set params = %*:"="
-    echo UAC.ShellExecute "cmd.exe", "/c %~s0 %params%", "", "runas", 1 >> "%temp%\getadmin.vbs"
+    set params= %*
+    echo UAC.ShellExecute "cmd.exe", "/c ""%~s0"" %params:"=""%", "", "runas", 1 >> "%temp%\getadmin.vbs"
 
     "%temp%\getadmin.vbs"
     del "%temp%\getadmin.vbs"
@@ -19,25 +22,25 @@ if '%errorlevel%' NEQ '0' (
 
 :gotAdmin
     pushd "%CD%"
-    CD /D "%~dp0"
+    CD /D "%~dp0" 
 
+title Debloat Android (Generic)
 echo =====================================================
-echo 	Script made by @lucmsilva
+echo	Generic debloat script - DT ver.
+echo 	Script made by @lucmsilva - Debloating Things
 echo 	Telegram group @lucmsilva651
-echo 	⠀
-echo 	Subscribe at my YouTube channel
+echo 	Subscribe at my YouTube channel:
 echo 	http://www.youtube.com/c/lucmsilva651
 echo =====================================================
-timeout /t 10 /nobreak
+pause
+cls
 
-echo Check the device connection:
+title Check the device connection:
 adb devices
 pause
 cls
 
-echo Uninstalling some apps...
-timeout /t 5  /nobreak
-cls
+title Uninstalling some apps...
 adb shell pm uninstall --user 0 com.google.android.apps.tachyon
 adb shell pm uninstall --user 0 com.google.android.music
 adb shell pm uninstall --user 0 com.google.android.videos
@@ -70,19 +73,15 @@ adb shell pm uninstall --user 0 com.android.stk
 adb shell pm uninstall --user 0 com.android.stk2
 adb shell pm uninstall --user 0 com.android.traceur
 cls
-echo Process finished!
-timeout /t 10 /nobreak
-cls
 
+title Process finished!
 taskkill /f /im adb.exe
 cls
-color a
 echo =====================================================
-echo 	Script made by @lucmsilva
+echo 	Script made by @lucmsilva - Debloating Things
 echo 	Telegram group @lucmsilva651
-echo 	⠀
-echo 	Subscribe at my YouTube channel
+echo 	Subscribe at my YouTube channel:
 echo 	http://www.youtube.com/c/lucmsilva651
 echo =====================================================
-timeout /t 10 /nobreak
+pause
 exit
