@@ -1,5 +1,24 @@
 body{
 	background: #202125;
 	color: #ffffff;
-	font-family: 'Open Sans', sans-serif;
+	text-align: center;
+	font-family: 'Raleway', sans-serif;
 }
+div.centered {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+a:link {
+  color: red;
+}
+a:visited {
+  color: green;
+}
+a:hover {
+  color: pink;
+}
+a:active {
+  color: blue;
+} 
