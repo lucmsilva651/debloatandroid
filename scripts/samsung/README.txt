@@ -1,5 +1,7 @@
 Debloat Android (Samsung Debloat script)
 
+ADB Platform Tools - version r34.0.4 included
+
 Packages removed by this script:
  - com.sec.app.spush
  - com.samsung.android.app.dtv.sbtvd

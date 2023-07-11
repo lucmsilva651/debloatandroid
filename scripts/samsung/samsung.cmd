@@ -26,13 +26,17 @@ if '%errorlevel%' NEQ '0' (
 
 title Debloat Android (Samsung Debloat)
 echo =====================================================
-echo	Samsung Debloat - DT ver.
+echo 	Samsung Debloat - DT ver.
 echo 	Script made by @lucmsilva - Debloating Things
 echo 	Telegram group @lucmsilva651
 echo 	Subscribe at my YouTube channel:
 echo 	http://www.youtube.com/c/lucmsilva651
 echo =====================================================
 pause
+
+title Starting ADB...
+cd platform-tools
+cls
 
 title Check the device connection:
 adb devices
@@ -83,7 +87,7 @@ title Process finished!
 taskkill /f /im adb.exe
 cls
 echo =====================================================
-echo	Samsung Debloat - DT ver.
+echo 	Samsung Debloat - DT ver.
 echo 	Script made by @lucmsilva - Debloating Things
 echo 	Telegram group @lucmsilva651
 echo 	Subscribe at my YouTube channel:

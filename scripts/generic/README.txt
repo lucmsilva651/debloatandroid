@@ -1,5 +1,7 @@
 Debloat Android (generic script)
 
+ADB Platform Tools - version r34.0.4 included
+
 Packages removed by this script:
  - com.google.android.apps.tachyon
  - com.google.android.music
