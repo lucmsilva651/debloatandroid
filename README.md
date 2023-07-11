@@ -1,2 +1,0 @@
-# debloatandroid
- Debloat Android devices.
