@@ -1,29 +1,51 @@
+/* CSS design by Lucas Gabriel (lucmsilva) for the Debloating Things website. */
+/* Use is permitted under the MIT license. */
+
+/* ----------------------------------------------------------------------------- */
+
+/* MIT License */
+
+/* Copyright (c) 2023 Lucas Gabriel (lucmsilva)*/
+/* Permission is hereby granted, free of charge, to any person obtaining a copy */
+/* of this software and associated documentation files (the "Software"), to deal */
+/* in the Software without restriction, including without limitation the rights */
+/* to use, copy, modify, merge, publish, distribute, sublicense, and/or sell */
+/* copies of the Software, and to permit persons to whom the Software is */
+/* furnished to do so, subject to the following conditions: */
+
+/* The above copyright notice and this permission notice shall be included in all */
+/* copies or substantial portions of the Software. */
+
+/* THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR */
+/* IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, */
+/* FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE */
+/* AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER */
+/* LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, */
+/* OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE */
+/* SOFTWARE. */
+
+/* ----------------------------------------------------------------------------- */
+
 body {
-	background: #202125;
-	color: #ffffff;
-	text-align: center;
+	background: #1c1b22;
 	font-family: 'Poppins', sans-serif;
+	color: #ffffff;
 }
 
-div.centered {
+a {
+	color: red;
+	text-decoration: none;
+}
+
+div.navbartop {
+	text-align: center;
+	color: red;
+}
+
+div.maincenter {
 	position: absolute;
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
-}
-
-a:link {
-	color: red;
-}
-
-a:visited {
-	color: red;
-}
-
-a:hover {
-	color: red;
-}
-
-a:active {
-	color: red;
+	text-align: center;
 }
