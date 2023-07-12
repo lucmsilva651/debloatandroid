@@ -17,13 +17,13 @@ a:link {
 }
 
 a:visited {
-	color: green;
+	color: red;
 }
 
 a:hover {
-	color: pink;
+	color: red;
 }
 
 a:active {
-	color: blue;
-} 
+	color: red;
+}
